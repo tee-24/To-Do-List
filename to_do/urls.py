@@ -3,5 +3,5 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('', views.tasks, name='index'),
+    path('', views.TaskList.as_view(), name='index'),
 ]
