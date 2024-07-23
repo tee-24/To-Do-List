@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from .models import Task
 from django.urls import reverse_lazy
-from django.contrib.auth.views import LoginView
-
+from django.contrib.auth.views import LoginView, LogoutView
 
 # Create your views here.
 class SignInView(LoginView):
