@@ -11,11 +11,13 @@
         body {
             background-color: pink;
             /* font-family: */
-            padding: 20px;
         }
-        /* .container {
+        .container {
+            max-width: 550px;
             margin: auto;
-        } */
+            box-shadow: 2px 2px 13px -4px;
+            padding: 10px;
+        }
         a {
             color: black;
         
@@ -67,9 +69,30 @@
         }
         .search-wrapper form{
             font-size: 40px;
+            row-gap: 5px;
         }
         #add-task{
             text-decoration: none;
+        }
+        input[type=text],
+        input[type=password],
+        textarea{
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80%;
+        }
+        label{
+            padding-top: 10px;
+            display: block;
+        }
+        .btn{
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: bisque;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
         }
     </style>
 </head>
