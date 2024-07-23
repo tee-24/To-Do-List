@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    {% extends 'to_do/base.html' %}
+    {% block content %}
     <h1>Register</h1>
     <form method="POST">
         {% csrf_token %}
@@ -13,6 +15,7 @@
         <input type="submit" value="Register">
     </form>
 
-    <a href="">Register</a>
+    <p>Already have an account? <a href="{% url 'login' %}">Sign in</a></p>
+    {% endblock content %}
 </body>
 </html>

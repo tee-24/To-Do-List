@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- Google Fonts -->
+
+    <style>
+        body {
+            background-color: pink;
+            /* font-family: */
+            padding: 20px;
+        }
+        /* .container {
+            margin: auto;
+        } */
+        a {
+            color: black;
+        
+        }
+        .header-bar{
+            display: flex;
+            background-color: rgb(255, 80, 255);
+            justify-content: space-between;
+        }
+        .action{
+            font-size: 20px;
+        }
+        .task-wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        .task-title{
+            display: flex;
+            padding: 10px;
+            font-size: 20px;
+            column-gap: 5px;
+        }
+        .task-item{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5px
+        }
+        .completed-task{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(255, 80, 255);
+            border-radius: 50%;
+        }
+        .incomplete-task{
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .delete-btn{
+            color: red;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .search-wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        .search-wrapper form{
+            font-size: 40px;
+        }
+        #add-task{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+    
+</body>
+</html>
