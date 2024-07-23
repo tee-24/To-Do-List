@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Task Form</h3>
     <a href="{% url 'index' %}">Home</a>
-    <form action="" method="POST">
+    <form method="POST">
         {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Submit">
+        <p>Are you sure you would like to delete this task?</p>
+        <input type="submit" value="Yes">
+
     </form>
+    
 </body>
 </html>

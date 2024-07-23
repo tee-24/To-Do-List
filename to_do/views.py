@@ -23,3 +23,8 @@ class TaskUpdate(generic.UpdateView):
     model = Task
     fields = '__all__'
     success_url = reverse_lazy('index')
+
+class DeleteView(generic.DeleteView):
+    model = Task
+    context_object_name = 'task'
+    success_url = reverse_lazy('index')
