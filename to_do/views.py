@@ -2,9 +2,18 @@ from django.shortcuts import render
 from django.views import generic
 from .models import Task
 from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
 
 
 # Create your views here.
+class SignInView(LoginView):
+    template_name = 'to_do/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self):
+        return reverse_lazy('index')
+
 class TaskList(generic.ListView):
     model = Task
     context_object_name = 'tasks'
