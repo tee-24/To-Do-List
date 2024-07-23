@@ -3,6 +3,7 @@ from django.views import generic
 from .models import Task
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 class SignInView(LoginView):
@@ -13,26 +14,36 @@ class SignInView(LoginView):
     def get_success_url(self):
         return reverse_lazy('index')
 
-class TaskList(generic.ListView):
+class TaskList(LoginRequiredMixin, generic.ListView):
     model = Task
     context_object_name = 'tasks'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = context['tasks'].filter(user=self.request.user)
+        context['count'] = context['tasks'].filter(complete=False).count()
+        return context
    
 
-class TaskDetail(generic.DetailView):
+class TaskDetail(LoginRequiredMixin, generic.DetailView):
     model = Task
     context_object_name = 'task'
     
-class TaskCreate(generic.CreateView):
+class TaskCreate(LoginRequiredMixin, generic.CreateView):
     model = Task
-    fields = '__all__'
+    fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('index')
 
-class TaskUpdate(generic.UpdateView):
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(TaskCreate, self).form_valid(form)
+
+class TaskUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Task
-    fields = '__all__'
+    fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('index')
 
-class DeleteView(generic.DeleteView):
+class DeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Task
     context_object_name = 'task'
     success_url = reverse_lazy('index')
