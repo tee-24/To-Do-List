@@ -1,5 +1,12 @@
 
+# Design
+## Color Scheme
+The final color scheme chosen was various shades of pink
+* Delete button (X) is red
+* Text is black
 
+### Typography 
+The font chosen was Roboto Condensed.
 
 ## Future Implementations
  I would like to add more functionality to this app to allow users to set a deadline for tasks, arrange tasks in order of importance, and share tasks and collaborate with other users.
