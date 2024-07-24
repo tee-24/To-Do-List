@@ -4,6 +4,22 @@
 ## Future Implementations
  I would like to add more functionality to this app to allow users to set a deadline for tasks, arrange tasks in order of importance, and share tasks and collaborate with other users.
 
+## Future Implementations
+ I would like to add more functionality to this app to allow users to set a deadline for tasks, arrange tasks in order of importance, and share tasks and collaborate with other users.
+
+# Technologies Used
+* Python3 - Delivers the structure and content for the game
+* Git - For version control
+* Gitpod - Used to develop the app
+* Gitbash - Terminal used to push changes to the GitHub repository
+* GitHub - Used to host the app
+* Heroku - Used to deploy the app
+* Django - Used to develop the app rapidly
+* [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/) - Used to build database
+* Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling
+* [Google Fonts](https://fonts.google.com/) - Used to import the font used on the app
+*  [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate code
+
 # Deployment & Local Development
 ## Deployment
 The app was deployed to Heroku via the following steps:
