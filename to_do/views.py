@@ -56,6 +56,9 @@ class TaskList(LoginRequiredMixin, generic.ListView):
 class TaskDetail(LoginRequiredMixin, generic.DetailView):
     model = Task
     context_object_name = 'task'
+
+    # if request.user!=task.user:
+    #     redirect to index 
     
 class TaskCreate(LoginRequiredMixin, generic.CreateView):
     model = Task
@@ -71,6 +74,8 @@ class TaskUpdate(LoginRequiredMixin, generic.UpdateView):
     fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('index')
 
+    # if request.user!=task.user:
+    #     redirect to index 
 class DeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Task
     context_object_name = 'task'
