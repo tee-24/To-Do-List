@@ -1,4 +1,27 @@
 
+# User Experience (UX)
+## Target Audience
+* Users who would like to organize their tasks
+* Users that would like to write a list of tasks to remember
+
+## User Stories
+* A user should be able to sign in
+* A user should be able to sign out
+* A user should be able to add a new task
+* A user should be able to search for a task
+* A user should be able to register an account
+* A user should be able to edit an existing task
+* A user should be able to delete an existing task
+* A user should be able to mark a task as completed
+* A user should be able to determine how to use the app
+* A user should be able to easily and intuitively navigate the app
+* A user should find it easy to determine how many tasks they have left to do
+
+## App Aims
+* To allow users to write a list of tasks
+* To allow users to track progress on tasks
+* To allow users to mark tasks as complete when finished
+
 # Design
 ## Color Scheme
 The final color scheme chosen was various shades of pink
