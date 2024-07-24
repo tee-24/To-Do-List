@@ -94,11 +94,11 @@ The app was deployed to Heroku via the following steps:
 1. Log in (or sign up) to Heroku
 2. Click New on the top right
 3. Choose create new app
-4.  Choose name and region and click create app
-5.  In the settings tab, click on Reveal Config Vars and add the key DISABLE_COLLECTSTATIC and the value 1
+4. Choose name and region and click create app
+5. In the settings tab, click on Reveal Config Vars and add the key DISABLE_COLLECTSTATIC and the value 1
 6. Add another key of DATABASE_URL and set the value as the url for the database
 7. Add another key of SECRET_KEY and set the value as a secret key of your choice
-8.   In the deploy tab, choose GitHub as deployment method and connect repository
+8. In the deploy tab, choose GitHub as deployment method and connect repository
 9. In Manual deploy section, click Deploy Branch
 
 ## Local Development
@@ -121,6 +121,19 @@ To clone the To-Do List repository:
 
 # Testing
 Testing was ongoing throughout the entire build. I utilized Chrome developer tools while building to pinpoint and troubleshoot any issues as I went along.
+
+### Manual Testing
+To fully test my app, I performed the following tests:
+| Test                   | Action                                                          | Expected Result                                                                    | Pass/Fail |
+| ---------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------- |
+| Test sign in form      | Fill out username and password                                  | Redirect to index page                                                             | Pass      |
+| Test registration form | Click register and fill out form                                | Redirect to index page                                                             | Pass      |
+| Test sign out link     | Click sign out link                                             | Redirect to sign in page                                                           | Pass      |
+| Test add task button   | Click on add task<br>Fill out task details<br>Click submit      | Redirect to index page with new task now added                                     | Pass      |
+| Edit task              | Click on a task to edit<br>Update the task<br>Click submit      | Redirect to index page with new task now updated                                   | Pass      |
+| Mark task as complete  | Click on an incomplete task<br>Mark as complete<br>Click submit | Redirect to index page with new task now marked as completed                       | Pass      |
+| Search for a task      | Type a task into the search bar and click search                | If the task exists, all others will be filtered out and the task will be displayed | Pass      |
+| Delete a task          | Click on X next to the task to be deleted<br>Click yes          | Redirect to index page with new task now deleted                                   | Pass      |
 
 ### Code Institute Python Linter
 Validation was done using [CI Python Linter](https://pep8ci.herokuapp.com/) 
