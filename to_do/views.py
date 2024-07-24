@@ -7,7 +7,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
+
 # Create your views here.
+"""
+Navigate to login page
+"""
 class SignInView(LoginView):
     template_name = 'to_do/login.html'
     fields = '__all__'
@@ -16,6 +20,10 @@ class SignInView(LoginView):
     def get_success_url(self):
         return reverse_lazy('index')
 
+
+"""
+Navigate to registration page
+"""
 class RegisterView(generic.FormView):
     template_name = 'to_do/register.html'
     form_class = UserCreationForm
@@ -34,6 +42,9 @@ class RegisterView(generic.FormView):
         return super(RegisterView, self).get(*args, **kwargs)
 
 
+"""
+Display task list
+"""
 class TaskList(LoginRequiredMixin, generic.ListView):
     model = Task
     context_object_name = 'tasks'
@@ -45,17 +56,24 @@ class TaskList(LoginRequiredMixin, generic.ListView):
 
         search_input = self.request.GET.get('search-area') or ''
         if search_input:
-            context['tasks'] = context['tasks'].filter(title__startswith=search_input)
+            context['tasks'] = context['tasks'].filter(
+                title__startswith=search_input)
 
         context['search_input'] = search_input
-        
         return context
-   
 
+
+"""
+Display task
+"""
 class TaskDetail(LoginRequiredMixin, generic.DetailView):
     model = Task
-    context_object_name = 'task' 
-    
+    context_object_name = 'task'
+
+
+"""
+Create a new task
+"""
 class TaskCreate(LoginRequiredMixin, generic.CreateView):
     model = Task
     fields = ['title', 'description', 'complete']
@@ -65,13 +83,19 @@ class TaskCreate(LoginRequiredMixin, generic.CreateView):
         form.instance.user = self.request.user
         return super(TaskCreate, self).form_valid(form)
 
+
+"""
+Edit/Update task
+"""
 class TaskUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Task
     fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('index')
 
-    # if request.user!=task.user:
-    #     redirect to index 
+
+"""
+Delete task
+"""
 class DeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Task
     context_object_name = 'task'
