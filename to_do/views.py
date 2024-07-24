@@ -20,7 +20,6 @@ class RegisterView(generic.FormView):
     template_name = 'to_do/register.html'
     form_class = UserCreationForm
     success_url = reverse_lazy('index')
-    # redirect_authenticated_user = True
 
     def form_valid(self, form):
         user = form.save()
@@ -55,10 +54,7 @@ class TaskList(LoginRequiredMixin, generic.ListView):
 
 class TaskDetail(LoginRequiredMixin, generic.DetailView):
     model = Task
-    context_object_name = 'task'
-
-    # if request.user!=task.user:
-    #     redirect to index 
+    context_object_name = 'task' 
     
 class TaskCreate(LoginRequiredMixin, generic.CreateView):
     model = Task

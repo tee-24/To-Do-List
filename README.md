@@ -35,5 +35,9 @@ To clone the To-Do List repository:
 7.  Paste the link you copied in step 3
 8. Press enter
 
+# Bugs
+### Known Bugs
+If a user knows the task id of another user's task, they are able to view and edit the task by changing the URL.
+
 # Acknowledgements
 This app was designed and developed in conjunction with the Full Stack Software Developer Diploma course (ecommerce) at the Code Institute. I would like to thank my mentor, Matt, the Slack community, and Code Institute for all their support.
