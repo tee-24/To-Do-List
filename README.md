@@ -1,4 +1,9 @@
 
+
+
+## Future Implementations
+ I would like to add more functionality to this app to allow users to set a deadline for tasks, arrange tasks in order of importance, and share tasks and collaborate with other users.
+
 # Deployment & Local Development
 ## Deployment
 The app was deployed to Heroku via the following steps:
