@@ -48,6 +48,34 @@ To clone the To-Do List repository:
 7.  Paste the link you copied in step 3
 8. Press enter
 
+# Testing
+Testing was ongoing throughout the entire build. I utilized Chrome developer tools while building to pinpoint and troubleshoot any issues as I went along.
+
+### Code Institute Python Linter
+Validation was done using [CI Python Linter](https://pep8ci.herokuapp.com/) 
+
+admin.py
+![admin](assets/images/admin.png)
+
+app-urls.py
+![app-url](assets/images/app-url.png)
+
+views.py
+![view](assets/images/app-view.png)
+
+model.py
+![model](assets/images/models.png)
+
+settings.py
+![settings](assets/images/setting.png)
+
+urls.py
+![urls](assets/images/urls.png)
+
+### W3C Validator
+The W3C validator was used to validate the HTML and CSS on all pages of the app. 
+![W3C Validator](assets/images/Screenshot%202024-07-24%20070712.png)
+
 # Bugs
 ### Known Bugs
 If a user knows the task id of another user's task, they are able to view and edit the task by changing the URL.
