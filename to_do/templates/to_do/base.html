@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
+    <!-- CSS -->
     <style>
         body {
             background-color: pink;
@@ -18,81 +21,97 @@
             font-weight: 300;
             font-style: normal;
         }
+
         .container {
             max-width: 550px;
             margin: auto;
             box-shadow: 2px 2px 13px -4px;
         }
+
         a {
             color: black;
             text-decoration: none;
         }
-        .header-bar{
+
+        .header-bar {
             display: flex;
             background-color: rgb(255, 80, 255);
             justify-content: space-between;
             padding: 7px;
         }
-        .action{
+
+        .action {
             font-size: 20px;
         }
-        .task-wrapper{
+
+        .task-wrapper {
             display: flex;
             flex-direction: column;
         }
-        .task-title{
+
+        .task-title {
             display: flex;
             padding: 10px;
             font-size: 20px;
             column-gap: 5px;
         }
-        .task-item{
+
+        .task-item {
             display: flex;
             justify-content: space-between;
             padding-bottom: 5px
         }
-        .completed-task{
+
+        .completed-task {
             height: 20px;
             width: 20px;
             background-color: rgb(255, 80, 255);
             border-radius: 50%;
         }
-        .incomplete-task{
+
+        .incomplete-task {
             height: 20px;
             width: 20px;
             background-color: white;
             border-radius: 50%;
         }
-        .delete-btn{
+
+        .delete-btn {
             color: red;
             text-decoration: none;
             font-size: 30px;
             font-weight: 700;
         }
-        .search-wrapper{
+
+        .search-wrapper {
             display: flex;
             flex-direction: column;
             row-gap: 8px;
         }
-        .search-wrapper form{
+
+        .search-wrapper form {
             font-size: 40px;
         }
-        #add-task{
+
+        #add-task {
             text-decoration: none;
         }
+
         input[type=text],
         input[type=password],
-        textarea{
+        textarea {
             border: 1px solid;
             border-radius: 5px;
             padding: 10px;
             width: 80%;
         }
-        label{
+
+        label {
             padding-top: 10px;
             display: block;
         }
-        .btn{
+
+        .btn {
             border: 1px solid;
             border-radius: 5px;
             background-color: rgb(255, 80, 255);
@@ -100,14 +119,18 @@
             cursor: pointer;
             font-size: 15px;
         }
-        .form-body, .main-body{
+
+        .form-body,
+        .main-body {
             padding: 10px;
         }
-        h3{
+
+        h3 {
             margin: 0;
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -116,6 +139,7 @@
         {% endblock content %}
 
     </div>
-    
+
 </body>
+
 </html>

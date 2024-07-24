@@ -39,5 +39,10 @@ To clone the To-Do List repository:
 ### Known Bugs
 If a user knows the task id of another user's task, they are able to view and edit the task by changing the URL.
 
+# Credits
+* Django was learned from [Django Documentation](https://docs.djangoproject.com/en/5.0/)
+* User authentication was learned from [Youtube](https://youtu.be/CTrVDi3tt8o?si=lLjQ6_be5Kg-AFyg)
+* Fonts were sourced from [Google Fonts](https://fonts.google.com/)
+
 # Acknowledgements
 This app was designed and developed in conjunction with the Full Stack Software Developer Diploma course (ecommerce) at the Code Institute. I would like to thank my mentor, Matt, the Slack community, and Code Institute for all their support.
