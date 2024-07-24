@@ -1,3 +1,9 @@
+# To-Do List App
+This is a To-Do List app that allows users to create their personal to-do list where they can create, view, edit, and delete tasks.
+
+You can view the live app here - [To-Do List App](https://django-to-do-list-app-63bdab6ae456.herokuapp.com/)
+
+![screenshot](/assets/images/homepage.png)
 
 # User Experience (UX)
 ## Target Audience
