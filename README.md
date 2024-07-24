@@ -37,6 +37,41 @@ The final color scheme chosen was various shades of pink
 ### Typography 
 The font chosen was Roboto Condensed.
 
+# Features
+The app is composed of a single model and 7 class-based views
+
+* Sign-in form - The user will be prompted to sign in upon starting the app
+
+![login](/assets/images/sign-in.png)
+
+* Registration form - The will allow the user to create a new account
+
+![register](/assets/images/register.png)
+
+* Sign-out link - This allows the user to sign out when signed into an account
+
+![intro](/assets/images/logout.png)
+
+* Homepage - This will welcome the user and display all tasks
+
+![home](/assets/images/homepage.png)
+
+* Search bar - This will allow the user to search for tasks
+
+![search](/assets/images/search.png)
+
+* Add task link - This takes the user to a form they must fill to add a new task
+
+![create](/assets/images/add-task.png)
+
+* Delete - This allows the user to delete tasks and asks the user for confirmation before deletion
+
+![delete](/assets/images/delete.png)
+
+* Completed task - When a task is marked as complete, the task is moved to the bottom of the list and crossed out. Also, the checkbox changes from white to pink
+
+![completed](/assets/images/marked.png)
+
 ## Future Implementations
  I would like to add more functionality to this app to allow users to set a deadline for tasks, arrange tasks in order of importance, and share tasks and collaborate with other users.
 
